@@ -6,14 +6,12 @@ VIMRC=~/.vimrc
 
 # Check if a username exist
 if [ -z $GITHUB ]; then
-	GITHUB=$MASHINE
 	echo "Requires your github account username"
 	exit 1
 fi
 
 # Vim
 if ! command -v vim >/dev/null 2>&1; then
-	sudo add-apt-repository ppa:jonathonf/vim
 	sudo apt update && sudo apt install vim
 	echo "vim is now installed"
 fi
